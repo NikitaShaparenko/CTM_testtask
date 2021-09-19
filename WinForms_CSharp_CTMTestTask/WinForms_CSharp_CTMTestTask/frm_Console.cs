@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace WinForms_CSharp_CTMTestTask
 {
-    public partial class main_frm : Form
+    public partial class frm_Console : Form
     {
-        public main_frm()
+        public frm_Console()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

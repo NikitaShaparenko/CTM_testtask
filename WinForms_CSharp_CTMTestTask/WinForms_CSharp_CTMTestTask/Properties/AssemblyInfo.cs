@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
 [assembly: AssemblyTitle("WinForms_CSharp_CTMTestTask")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("CTM Test Task")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("CTM")]
 [assembly: AssemblyProduct("WinForms_CSharp_CTMTestTask")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © CTM 2021")]
+[assembly: AssemblyTrademark("CTM")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми

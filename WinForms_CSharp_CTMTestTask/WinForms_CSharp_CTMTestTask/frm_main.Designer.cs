@@ -1,6 +1,6 @@
 ﻿namespace WinForms_CSharp_CTMTestTask
 {
-    partial class main_frm
+    partial class frm_main
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,14 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnl = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // Form1
+            // pnl
+            // 
+            this.pnl.Location = new System.Drawing.Point(12, 12);
+            this.pnl.Name = "pnl";
+            this.pnl.Size = new System.Drawing.Size(200, 100);
+            this.pnl.TabIndex = 0;
+            // 
+            // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.Controls.Add(this.pnl);
+            this.Name = "frm_main";
             this.Text = "Тестовое задание";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -43,6 +52,8 @@
         }
 
         #endregion
+
+        public System.Windows.Forms.Panel pnl;
     }
 }
 
