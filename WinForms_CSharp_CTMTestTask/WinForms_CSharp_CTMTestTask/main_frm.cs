@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace WinForms_CSharp_CTMTestTask
 {
-    public partial class Form1 : Form
+    public partial class main_frm : Form
     {
-        public Form1()
+        public main_frm()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
