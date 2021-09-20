@@ -11,24 +11,29 @@ namespace WinForms_CSharp_CTMTestTask
 {
     public partial class frm_main : Form
     {
-        public Graphics g;
-        public frm_main()
+        public Graphics g; //Декларация инструмента по работе с 2D графикой
+        public frm_main() //Конструктор формы
         {
-            InitializeComponent();
+            InitializeComponent(); //Функция инициализации контролов по умолчанию
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //При загрузке выбирается поле для рисования
             g = Program.ga.pnl_area.CreateGraphics();
+
+            //Подключаем правую панель с VertexManager (управление вершинами)
             pnlAddon.Controls.Clear();
             Program.vm.Location = new Point(1, 1);
             Program.vm.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
             pnlAddon.Controls.Add(Program.vm);
             
+            //Подключаем левую панеь с GraphArea (визуальное отображение многоугольника)
             Program.ga.Location = new Point(1, 1);
             Program.ga.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
             pnl.Controls.Add(Program.ga);
 
+            //Запуск приветственного сообщения
             tWelcome.Start();
         }
 
@@ -38,7 +43,7 @@ namespace WinForms_CSharp_CTMTestTask
         }
 
         private void tWelcome_Tick(object sender, EventArgs e)
-        {
+        {//Приветственное сообщение
             string welcome_msg = "";
             welcome_msg = "Добро пожаловать в программу, реализующую условия тестового задания!" + Environment.NewLine + Environment.NewLine;
             welcome_msg += "Необходимо было выполнить:" + Environment.NewLine;
