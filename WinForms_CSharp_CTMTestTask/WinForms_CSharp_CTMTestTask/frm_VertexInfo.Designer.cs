@@ -138,6 +138,7 @@
             this.Name = "frm_VertexInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод данных о точке";
+            this.Load += new System.EventHandler(this.frm_VertexInfo_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_VertexInfo_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.nud_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Y)).EndInit();
