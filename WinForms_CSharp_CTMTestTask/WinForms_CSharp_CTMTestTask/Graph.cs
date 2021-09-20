@@ -42,8 +42,8 @@ namespace WinForms_CSharp_CTMTestTask
 
         public void lst_loader()
         {
-            lst_dots_x = Program.prg_core.get_lst_dots_x();
-            lst_dots_y = Program.prg_core.get_lst_dots_y();
+            lst_dots_x = Program.core.get_lst_dots_x();
+            lst_dots_y = Program.core.get_lst_dots_y();
         }
     }
 }

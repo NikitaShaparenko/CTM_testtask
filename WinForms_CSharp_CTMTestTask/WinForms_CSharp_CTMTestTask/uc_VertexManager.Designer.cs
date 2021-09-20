@@ -43,6 +43,7 @@
             // 
             // b_AddVertex
             // 
+            this.b_AddVertex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.b_AddVertex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b_AddVertex.Location = new System.Drawing.Point(7, 239);
             this.b_AddVertex.Name = "b_AddVertex";
@@ -54,6 +55,7 @@
             // 
             // b_InsertVertex
             // 
+            this.b_InsertVertex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.b_InsertVertex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b_InsertVertex.Location = new System.Drawing.Point(7, 314);
             this.b_InsertVertex.Name = "b_InsertVertex";
@@ -65,6 +67,7 @@
             // 
             // b_KillVertex
             // 
+            this.b_KillVertex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.b_KillVertex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b_KillVertex.Location = new System.Drawing.Point(7, 354);
             this.b_KillVertex.Name = "b_KillVertex";
@@ -77,10 +80,10 @@
             // lbl_Header
             // 
             this.lbl_Header.AutoSize = true;
-            this.lbl_Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_Header.Location = new System.Drawing.Point(3, 11);
+            this.lbl_Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_Header.Location = new System.Drawing.Point(3, 12);
             this.lbl_Header.Name = "lbl_Header";
-            this.lbl_Header.Size = new System.Drawing.Size(146, 20);
+            this.lbl_Header.Size = new System.Drawing.Size(162, 20);
             this.lbl_Header.TabIndex = 3;
             this.lbl_Header.Text = "Окно ввода точек";
             // 
@@ -89,8 +92,9 @@
             this.lv_Vertexes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lv_Vertexes.HideSelection = false;
             this.lv_Vertexes.Location = new System.Drawing.Point(6, 35);
+            this.lv_Vertexes.MultiSelect = false;
             this.lv_Vertexes.Name = "lv_Vertexes";
-            this.lv_Vertexes.Size = new System.Drawing.Size(147, 198);
+            this.lv_Vertexes.Size = new System.Drawing.Size(204, 198);
             this.lv_Vertexes.TabIndex = 4;
             this.lv_Vertexes.UseCompatibleStateImageBehavior = false;
             // 
@@ -154,8 +158,10 @@
             this.Controls.Add(this.b_KillVertex);
             this.Controls.Add(this.b_InsertVertex);
             this.Controls.Add(this.b_AddVertex);
+            this.MaximumSize = new System.Drawing.Size(213, 521);
+            this.MinimumSize = new System.Drawing.Size(213, 521);
             this.Name = "uc_VertexManager";
-            this.Size = new System.Drawing.Size(213, 534);
+            this.Size = new System.Drawing.Size(213, 521);
             this.Load += new System.EventHandler(this.uc_VertexManager_Load);
             this.gb_Info.ResumeLayout(false);
             this.gb_Info.PerformLayout();

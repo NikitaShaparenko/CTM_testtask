@@ -7,21 +7,26 @@ namespace WinForms_CSharp_CTMTestTask
 {
     static class Program
     {
-        public static frm_main main = new frm_main();
-        public static frm_Console console = new frm_Console();
-        public static uc_VertexManager vm = new uc_VertexManager();
-        public static Core prg_core = new Core();
+        public static frm_main main;
+        public static frm_Console console;
+        public static uc_VertexManager vm;
+        public static Core core;
 
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
-        
         [STAThread]
         static void Main()
         {
+            main = new frm_main();
+            console = new frm_Console();
+            vm = new uc_VertexManager();
+            core = new Core();
+
+            IntPtr dm1 = main.Handle;
+            IntPtr dm2 = console.Handle;
+            IntPtr dm3 = vm.Handle;
+
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(main);
+           Application.Run(main);
         }
     }
 }

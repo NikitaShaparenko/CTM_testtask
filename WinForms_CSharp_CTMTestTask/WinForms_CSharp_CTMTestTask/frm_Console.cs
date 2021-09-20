@@ -13,6 +13,7 @@ namespace WinForms_CSharp_CTMTestTask
     {
         public frm_Console()
         {
+            CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
         }
 

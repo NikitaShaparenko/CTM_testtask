@@ -28,15 +28,15 @@ namespace WinForms_CSharp_CTMTestTask
             x = int.Parse(nud_X.Value.ToString());
             y = int.Parse(nud_Y.Value.ToString());
 
-            Program.prg_core.callback_x = x;
-            Program.prg_core.callback_y = y;
-            Program.prg_core.callback_status = true;
+            Program.core.callback_x = x;
+            Program.core.callback_y = y;
+            Program.core.callback_status = true;
             this.Close();
         }
 
         private void bClose_Click(object sender, EventArgs e)
         {
-            Program.prg_core.callback_status = false;
+            Program.core.callback_status = false;
             this.Close();
         }
     }
