@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
             this.pnlAddon = new System.Windows.Forms.Panel();
             this.main_tlp = new System.Windows.Forms.TableLayoutPanel();
             this.pnl = new System.Windows.Forms.Panel();
+            this.tWelcome = new System.Windows.Forms.Timer(this.components);
             this.main_tlp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +69,12 @@
             this.pnl.Size = new System.Drawing.Size(594, 611);
             this.pnl.TabIndex = 1;
             // 
+            // tWelcome
+            // 
+            this.tWelcome.Enabled = true;
+            this.tWelcome.Interval = 200;
+            this.tWelcome.Tick += new System.EventHandler(this.tWelcome_Tick);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -75,7 +83,11 @@
             this.ClientSize = new System.Drawing.Size(800, 617);
             this.Controls.Add(this.main_tlp);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 656);
+            this.MinimumSize = new System.Drawing.Size(816, 656);
             this.Name = "frm_main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Тестовое задание";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.main_tlp.ResumeLayout(false);
@@ -88,6 +100,7 @@
         public System.Windows.Forms.Panel pnlAddon;
         private System.Windows.Forms.TableLayoutPanel main_tlp;
         public System.Windows.Forms.Panel pnl;
+        private System.Windows.Forms.Timer tWelcome;
     }
 }
 

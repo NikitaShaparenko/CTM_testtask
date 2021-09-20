@@ -59,12 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core.cs" />
-    <Compile Include="frm_Console.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Console.Designer.cs">
-      <DependentUpon>frm_Console.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,9 +86,6 @@
     <Compile Include="uc_VertexManager.Designer.cs">
       <DependentUpon>uc_VertexManager.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frm_Console.resx">
-      <DependentUpon>frm_Console.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>

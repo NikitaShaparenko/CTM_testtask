@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace WinForms_CSharp_CTMTestTask
 {
@@ -9,9 +10,17 @@ namespace WinForms_CSharp_CTMTestTask
     {
         public Core()
         {
-            //lst_dots_x.Clear();
-            //lst_dots_y.Clear();
+            
         }
+        ~Core()
+        {
+            callback_status = false;
+            callback_x = 0;
+            callback_y = 0;
+            lst_dots_x.Clear();
+            lst_dots_y.Clear();
+        }
+       
         List<int> lst_dots_x = new List<int>();
         List<int> lst_dots_y = new List<int>();
 
@@ -45,12 +54,6 @@ namespace WinForms_CSharp_CTMTestTask
         {
             lst_dots_x.Clear();
             lst_dots_y.Clear();
-
-            //for (int i = lst_dots_x.Count; i>0;i--)
-            //{
-            //    lst_dots_x.Remove(i);
-            //    lst_dots_y.Remove(i);
-            //}
         }
 
         public void lst_insert(int pos,int item_x, int item_y)
@@ -61,6 +64,8 @@ namespace WinForms_CSharp_CTMTestTask
 
         public double calc_square()
         {
+            try
+            {
             int n = lst_dots_x.Count();
             int sum1 = 0, sum2 = 0;
 
@@ -69,8 +74,15 @@ namespace WinForms_CSharp_CTMTestTask
                 sum1 += lst_dots_x[i] * lst_dots_y[i + 1];
                 sum2 += lst_dots_y[i] * lst_dots_x[i + 1];
             }
+                return Math.Abs((sum1 - sum2) / (double)2);
 
-            return Math.Abs((sum1 - sum2) / (double)2);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка при вычислении площади фигуры!" + Environment.NewLine + Environment.NewLine + ex.Message);
+                return 0;
+            }
+
         }
     }
 }

@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.ListBox();
+            this.cbGridEnabler = new System.Windows.Forms.CheckBox();
             this.gb_Info.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             this.b_InsertVertex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.b_InsertVertex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b_InsertVertex.Location = new System.Drawing.Point(7, 313);
+            this.b_InsertVertex.Location = new System.Drawing.Point(7, 278);
             this.b_InsertVertex.Name = "b_InsertVertex";
             this.b_InsertVertex.Size = new System.Drawing.Size(144, 34);
             this.b_InsertVertex.TabIndex = 1;
@@ -69,7 +70,7 @@
             // 
             this.b_KillVertex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.b_KillVertex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b_KillVertex.Location = new System.Drawing.Point(7, 353);
+            this.b_KillVertex.Location = new System.Drawing.Point(7, 318);
             this.b_KillVertex.Name = "b_KillVertex";
             this.b_KillVertex.Size = new System.Drawing.Size(144, 34);
             this.b_KillVertex.TabIndex = 2;
@@ -149,12 +150,25 @@
             this.lb.Size = new System.Drawing.Size(188, 184);
             this.lb.TabIndex = 6;
             // 
+            // cbGridEnabler
+            // 
+            this.cbGridEnabler.AutoSize = true;
+            this.cbGridEnabler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbGridEnabler.Location = new System.Drawing.Point(7, 358);
+            this.cbGridEnabler.Name = "cbGridEnabler";
+            this.cbGridEnabler.Size = new System.Drawing.Size(168, 24);
+            this.cbGridEnabler.TabIndex = 7;
+            this.cbGridEnabler.Text = "Отображать сетку";
+            this.cbGridEnabler.UseVisualStyleBackColor = true;
+            this.cbGridEnabler.CheckedChanged += new System.EventHandler(this.cbGridEnabler_CheckedChanged);
+            // 
             // uc_VertexManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.cbGridEnabler);
             this.Controls.Add(this.lb);
             this.Controls.Add(this.gb_Info);
             this.Controls.Add(this.lbl_Header);
@@ -185,5 +199,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lb;
+        public System.Windows.Forms.CheckBox cbGridEnabler;
     }
 }

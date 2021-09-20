@@ -37,13 +37,21 @@ namespace WinForms_CSharp_CTMTestTask
 
         void push_info()
         {
+            try
+            {
             lv_loadData();
-            Program.main.pnl.Refresh();
+            Program.ga.pnl_area.Refresh();
             Program.graph.grph_doDots();
             Program.graph.grph_doConnection();
+            Program.graph.do_grph_grid();
             txtVertexNumber.Text = Program.core.get_lst_dots_x().Count.ToString();
             txtSquare.Text = Program.core.calc_square().ToString();
-        }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка при обновлении значений!" + Environment.NewLine + Environment.NewLine + ex.Message);
+            }
+            }
 
         private void b_InsertVertex_Click(object sender, EventArgs e)
         {
@@ -85,6 +93,11 @@ namespace WinForms_CSharp_CTMTestTask
                 Program.core.lst_add_dot(Program.core.callback_x, Program.core.callback_y);
             }
             push_info();
+        }
+
+        private void cbGridEnabler_CheckedChanged(object sender, EventArgs e)
+        {
+            Program.vm.push_info();
         }
     }
 }

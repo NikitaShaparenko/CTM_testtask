@@ -15,5 +15,10 @@ namespace WinForms_CSharp_CTMTestTask
         {
             InitializeComponent();
         }
+
+        private void pnl_bg_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

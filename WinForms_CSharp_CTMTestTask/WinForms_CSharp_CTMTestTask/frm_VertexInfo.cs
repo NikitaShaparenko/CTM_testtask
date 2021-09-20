@@ -16,11 +16,6 @@ namespace WinForms_CSharp_CTMTestTask
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void bSave_Click(object sender, EventArgs e)
         {
             int x, y;
@@ -38,6 +33,18 @@ namespace WinForms_CSharp_CTMTestTask
         {
             Program.core.callback_status = false;
             this.Close();
+        }
+
+        private void frm_VertexInfo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                bSave_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                bClose_Click(sender, e);
+            }
         }
     }
 }

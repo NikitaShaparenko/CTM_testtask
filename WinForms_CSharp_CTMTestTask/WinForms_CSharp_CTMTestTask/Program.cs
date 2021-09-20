@@ -7,8 +7,6 @@ namespace WinForms_CSharp_CTMTestTask
 {
     static class Program
     {
-        
-        public static frm_Console console;
         public static uc_VertexManager vm;
         public static uc_grapharea ga;
         public static Core core;
@@ -20,21 +18,19 @@ namespace WinForms_CSharp_CTMTestTask
         {
             vm = new uc_VertexManager();
             ga = new uc_grapharea();
-            console = new frm_Console();
             main = new frm_main();
             core = new Core();
             graph = new Graph();
             
-            IntPtr dm1 = console.Handle;
-            IntPtr dm2 = vm.Handle;
-            IntPtr dm3 = ga.Handle;
-            IntPtr dm4 = main.Handle;
+            IntPtr dm1 = vm.Handle;
+            IntPtr dm2 = ga.Handle;
+            IntPtr dm3 = main.Handle;
 
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(main);
-           
 
+            vm.Dispose();
+            ga.Dispose();
+            main.Dispose();
         }
     }
 }

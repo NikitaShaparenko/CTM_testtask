@@ -99,11 +99,6 @@
             0,
             0,
             0});
-            this.nud_X.Minimum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            -2147483648});
             this.nud_X.Name = "nud_X";
             this.nud_X.Size = new System.Drawing.Size(120, 26);
             this.nud_X.TabIndex = 7;
@@ -117,11 +112,6 @@
             0,
             0,
             0});
-            this.nud_Y.Minimum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            -2147483648});
             this.nud_Y.Name = "nud_Y";
             this.nud_Y.Size = new System.Drawing.Size(120, 26);
             this.nud_Y.TabIndex = 8;
@@ -141,12 +131,14 @@
             this.Controls.Add(this.lbl_Header);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(385, 191);
             this.MinimumSize = new System.Drawing.Size(385, 191);
             this.Name = "frm_VertexInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод данных о точке";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_VertexInfo_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.nud_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Y)).EndInit();
             this.ResumeLayout(false);

@@ -67,6 +67,7 @@
             this.pnl_bg.Name = "pnl_bg";
             this.pnl_bg.Size = new System.Drawing.Size(600, 600);
             this.pnl_bg.TabIndex = 2;
+            this.pnl_bg.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_bg_Paint);
             // 
             // uc_grapharea
             // 
