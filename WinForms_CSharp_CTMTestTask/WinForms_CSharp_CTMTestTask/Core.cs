@@ -10,7 +10,7 @@ namespace WinForms_CSharp_CTMTestTask
     {
         public Core() //Конструктор по умолчанию
         {
-            
+
         }
         ~Core() //Деструктор по умолчанию и высвобождение динамической памяти
         {
@@ -20,7 +20,7 @@ namespace WinForms_CSharp_CTMTestTask
             lst_dots_x.Clear();
             lst_dots_y.Clear();
         }
-       
+
         List<int> lst_dots_x = new List<int>(); //Создаём список под все значения абсцисс точек
         List<int> lst_dots_y = new List<int>(); //и под все значения ординат
 
@@ -57,7 +57,7 @@ namespace WinForms_CSharp_CTMTestTask
             lst_dots_y.Clear();
         }
 
-        public void lst_insert(int pos,int item_x, int item_y) //Функция вставки значений координат точки перед выбранным в списке
+        public void lst_insert(int pos, int item_x, int item_y) //Функция вставки значений координат точки перед выбранным в списке
         {
             lst_dots_x.Insert(pos, item_x);
             lst_dots_y.Insert(pos, item_y);
@@ -65,31 +65,37 @@ namespace WinForms_CSharp_CTMTestTask
 
         public double calc_square() //Функция вычисления площади многоугольника
         {
+
             try //Обработчик ошибок
             {
-            int n = lst_dots_x.Count(); //Считаем количество вершин фигуры
-            int sum1 = 0, sum2 = 0;
+                int n = lst_dots_x.Count(); //Считаем количество вершин фигуры
+                if (n > 2)
+                {
 
-            for (int i = 0; i < n - 1; i++)
-            {
-                    //Умножаем значение координаты «х» первой вершины на значение координаты «у» второй вершины (и так далее)
-                    //А после сложим результаты
-                    sum1 += lst_dots_x[i] * lst_dots_y[i + 1];
 
-                    //Умножаем значение координаты «у» первый вершины на значение координаты «х» второй вершины(и так далее).
-                    //А после сложим результаты
-                    sum2 += lst_dots_y[i] * lst_dots_x[i + 1];
-            }
-                //Последний шаг - вычитание сумм и деление на 2, взяв модуль.
-                return Math.Abs((sum1 - sum2) / (double)2);
+                    int sum1 = 0, sum2 = 0;
 
+                    for (int i = 0; i < n - 1; i++)
+                    {
+                        //Умножаем значение координаты «х» первой вершины на значение координаты «у» второй вершины (и так далее)
+                        //А после сложим результаты
+                        sum1 += lst_dots_x[i] * lst_dots_y[i + 1];
+
+                        //Умножаем значение координаты «у» первый вершины на значение координаты «х» второй вершины(и так далее).
+                        //А после сложим результаты
+                        sum2 += lst_dots_y[i] * lst_dots_x[i + 1];
+                    }
+                    //Последний шаг - вычитание сумм и деление на 2, взяв модуль.
+                    return Math.Abs((sum1 - sum2) / (double)2);
+                }
+                else return 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Произошла ошибка при вычислении площади фигуры!" + Environment.NewLine + Environment.NewLine + ex.Message);
                 return 0;
             }
-
+            return 0;
         }
     }
 }
