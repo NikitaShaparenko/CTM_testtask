@@ -10,3 +10,4 @@ C:\Users\nikit\Documents\GitHub\CTM_testtask\WinForms_CSharp_CTMTestTask\WinForm
 C:\Users\nikit\Documents\GitHub\CTM_testtask\WinForms_CSharp_CTMTestTask\WinForms_CSharp_CTMTestTask\obj\Debug\WinForms_CSharp_CTMTestTask.csproj.CoreCompileInputs.cache
 C:\Users\nikit\Documents\GitHub\CTM_testtask\WinForms_CSharp_CTMTestTask\WinForms_CSharp_CTMTestTask\obj\Debug\WinForms_CSharp_CTMTestTask.exe
 C:\Users\nikit\Documents\GitHub\CTM_testtask\WinForms_CSharp_CTMTestTask\WinForms_CSharp_CTMTestTask\obj\Debug\WinForms_CSharp_CTMTestTask.pdb
+C:\Users\nikit\Documents\GitHub\CTM_testtask\WinForms_CSharp_CTMTestTask\WinForms_CSharp_CTMTestTask\bin\Debug\WinForms_CSharp_CTMTestTask.exe.config

@@ -32,12 +32,12 @@
             this.b_InsertVertex = new System.Windows.Forms.Button();
             this.b_KillVertex = new System.Windows.Forms.Button();
             this.lbl_Header = new System.Windows.Forms.Label();
-            this.lv_Vertexes = new System.Windows.Forms.ListView();
             this.gb_Info = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtVertexNumber = new System.Windows.Forms.Label();
             this.txtSquare = new System.Windows.Forms.Label();
+            this.txtVertexNumber = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb = new System.Windows.Forms.ListBox();
             this.gb_Info.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,17 +87,6 @@
             this.lbl_Header.TabIndex = 3;
             this.lbl_Header.Text = "Окно ввода точек";
             // 
-            // lv_Vertexes
-            // 
-            this.lv_Vertexes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lv_Vertexes.HideSelection = false;
-            this.lv_Vertexes.Location = new System.Drawing.Point(6, 35);
-            this.lv_Vertexes.MultiSelect = false;
-            this.lv_Vertexes.Name = "lv_Vertexes";
-            this.lv_Vertexes.Size = new System.Drawing.Size(204, 198);
-            this.lv_Vertexes.TabIndex = 4;
-            this.lv_Vertexes.UseCompatibleStateImageBehavior = false;
-            // 
             // gb_Info
             // 
             this.gb_Info.Controls.Add(this.txtSquare);
@@ -112,23 +101,14 @@
             this.gb_Info.TabStop = false;
             this.gb_Info.Text = "Сведения";
             // 
-            // label2
+            // txtSquare
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 40);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Количество\r\nвершин:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Площадь:";
+            this.txtSquare.AutoSize = true;
+            this.txtSquare.Location = new System.Drawing.Point(112, 81);
+            this.txtSquare.Name = "txtSquare";
+            this.txtSquare.Size = new System.Drawing.Size(18, 20);
+            this.txtSquare.TabIndex = 4;
+            this.txtSquare.Text = "0";
             // 
             // txtVertexNumber
             // 
@@ -139,21 +119,40 @@
             this.txtVertexNumber.TabIndex = 3;
             this.txtVertexNumber.Text = "0";
             // 
-            // txtSquare
+            // label3
             // 
-            this.txtSquare.AutoSize = true;
-            this.txtSquare.Location = new System.Drawing.Point(112, 81);
-            this.txtSquare.Name = "txtSquare";
-            this.txtSquare.Size = new System.Drawing.Size(18, 20);
-            this.txtSquare.TabIndex = 4;
-            this.txtSquare.Text = "0";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Площадь:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 40);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Количество\r\nвершин:";
+            // 
+            // lb
+            // 
+            this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb.FormattingEnabled = true;
+            this.lb.ItemHeight = 20;
+            this.lb.Location = new System.Drawing.Point(7, 49);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(188, 184);
+            this.lb.TabIndex = 6;
             // 
             // uc_VertexManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lb);
             this.Controls.Add(this.gb_Info);
-            this.Controls.Add(this.lv_Vertexes);
             this.Controls.Add(this.lbl_Header);
             this.Controls.Add(this.b_KillVertex);
             this.Controls.Add(this.b_InsertVertex);
@@ -176,11 +175,11 @@
         private System.Windows.Forms.Button b_InsertVertex;
         private System.Windows.Forms.Button b_KillVertex;
         private System.Windows.Forms.Label lbl_Header;
-        private System.Windows.Forms.ListView lv_Vertexes;
         private System.Windows.Forms.GroupBox gb_Info;
         private System.Windows.Forms.Label txtSquare;
         private System.Windows.Forms.Label txtVertexNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox lb;
     }
 }

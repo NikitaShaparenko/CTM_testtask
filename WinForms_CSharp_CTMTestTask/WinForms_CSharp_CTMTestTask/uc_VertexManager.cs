@@ -19,15 +19,15 @@ namespace WinForms_CSharp_CTMTestTask
 
         private void uc_VertexManager_Load(object sender, EventArgs e)
         {
-
+            lb.Items.Clear();
         }
 
         void lv_loadData()
         {
-            lv_Vertexes.Clear();
+            lb.Items.Clear();
             for (int i = 0; i<Program.core.get_lst_dots_x().Count;i++)
             {
-                lv_Vertexes.Items.Add("Точка №" + (i + 1).ToString() + " --- [" + Program.core.get_lst_dots_x()[i].ToString() + " ; " + Program.core.get_lst_dots_y()[i].ToString() + "]");
+                lb.Items.Add("Точка №" + (i + 1).ToString() + " --- [" + Program.core.get_lst_dots_x()[i].ToString() + " ; " + Program.core.get_lst_dots_y()[i].ToString() + "]");
             }
         }
 
@@ -40,18 +40,17 @@ namespace WinForms_CSharp_CTMTestTask
 
         private void b_InsertVertex_Click(object sender, EventArgs e)
         {
-            if (lv_Vertexes.SelectedItems.Count < 1)
+            if (lb.SelectedItems.Count < 1)
             {
                 MessageBox.Show("Выберите вершину, перед которой хотите вставить другую!");
             }
             else
             {
                 frm_VertexInfo frmv = new frm_VertexInfo();
-                frmv.Show();
-                while (frmv.IsDisposed == false) { };
+                frmv.ShowDialog();
                 if (Program.core.callback_status == true)
                 {
-                    Program.core.lst_insert(lv_Vertexes.SelectedItems[0].Index,Program.core.callback_x, Program.core.callback_y);
+                    Program.core.lst_insert(lb.SelectedIndex,Program.core.callback_x, Program.core.callback_y);
                 }
                 push_info();
             }
@@ -59,13 +58,13 @@ namespace WinForms_CSharp_CTMTestTask
 
         private void b_KillVertex_Click(object sender, EventArgs e)
         {
-            if (lv_Vertexes.SelectedItems.Count < 1)
+            if (lb.SelectedItems.Count < 1)
             {
                 MessageBox.Show("Выберите вершину, которую хотите удалить!");
             }
             else
             {
-               Program.core.lst_kill(lv_Vertexes.SelectedItems[0].Index);
+               Program.core.lst_kill(lb.SelectedIndex);
                push_info();
             }
         }
@@ -73,8 +72,7 @@ namespace WinForms_CSharp_CTMTestTask
         private void b_AddVertex_Click(object sender, EventArgs e)
         {
             frm_VertexInfo frmv = new frm_VertexInfo();
-            frmv.Show();
-            while (frmv.IsDisposed == false){};
+            frmv.ShowDialog();
             if (Program.core.callback_status == true)
             {
                 Program.core.lst_add_dot(Program.core.callback_x, Program.core.callback_y);

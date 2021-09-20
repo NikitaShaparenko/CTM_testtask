@@ -14,8 +14,9 @@ namespace WinForms_CSharp_CTMTestTask
         public Graphics g;
         public frm_main()
         {
-            g = pnl.CreateGraphics();
+           
             InitializeComponent();
+            g = pnl.CreateGraphics();
         }
 
         private void Form1_Load(object sender, EventArgs e)

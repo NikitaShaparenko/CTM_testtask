@@ -7,9 +7,13 @@ namespace WinForms_CSharp_CTMTestTask
 {
     class Core
     {
-
-        List<int> lst_dots_x;
-        List<int> lst_dots_y;
+        public Core()
+        {
+            //lst_dots_x.Clear();
+            //lst_dots_y.Clear();
+        }
+        List<int> lst_dots_x = new List<int>();
+        List<int> lst_dots_y = new List<int>();
 
         public int callback_x = 0;
         public int callback_y = 0;

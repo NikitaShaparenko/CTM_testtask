@@ -13,8 +13,8 @@ namespace WinForms_CSharp_CTMTestTask
         Pen pen = new Pen(Color.Black, grph_pen_line_width);
         SolidBrush brush = new SolidBrush(Color.Black);
 
-        List<int> lst_dots_x;
-        List<int> lst_dots_y;
+        List<int> lst_dots_x = new List<int>();
+        List<int> lst_dots_y = new List<int>();
 
         public void grph_doConnection()
         {
