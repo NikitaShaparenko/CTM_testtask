@@ -20,6 +20,10 @@ namespace WinForms_CSharp_CTMTestTask
         private void uc_VertexManager_Load(object sender, EventArgs e)
         {
             lb.Items.Clear();
+            b_AddVertex.Location = new Point(this.Width / 2 - b_AddVertex.Width / 2, b_AddVertex.Location.Y);
+            b_InsertVertex.Location = new Point(this.Width / 2 - b_InsertVertex.Width / 2, b_InsertVertex.Location.Y);
+            b_KillVertex.Location = new Point(this.Width / 2 - b_KillVertex.Width / 2, b_KillVertex.Location.Y);
+
         }
 
         void lv_loadData()
@@ -34,6 +38,9 @@ namespace WinForms_CSharp_CTMTestTask
         void push_info()
         {
             lv_loadData();
+            Program.main.pnl.Refresh();
+            Program.graph.grph_doDots();
+            Program.graph.grph_doConnection();
             txtVertexNumber.Text = Program.core.get_lst_dots_x().Count.ToString();
             txtSquare.Text = Program.core.calc_square().ToString();
         }

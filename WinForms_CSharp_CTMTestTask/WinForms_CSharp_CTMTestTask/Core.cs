@@ -37,8 +37,8 @@ namespace WinForms_CSharp_CTMTestTask
 
         public void lst_kill(int pos)
         {
-            lst_dots_x.Remove(pos);
-            lst_dots_y.Remove(pos);
+            lst_dots_x.RemoveAt(pos);
+            lst_dots_y.RemoveAt(pos);
         }
 
         public void lst_killall()

@@ -10,6 +10,7 @@ namespace WinForms_CSharp_CTMTestTask
         
         public static frm_Console console;
         public static uc_VertexManager vm;
+        public static uc_grapharea ga;
         public static Core core;
         public static Graph graph;
         public static frm_main main;
@@ -18,14 +19,16 @@ namespace WinForms_CSharp_CTMTestTask
         static void Main()
         {
             vm = new uc_VertexManager();
+            ga = new uc_grapharea();
             console = new frm_Console();
             main = new frm_main();
             core = new Core();
-
+            graph = new Graph();
+            
             IntPtr dm1 = console.Handle;
             IntPtr dm2 = vm.Handle;
-            IntPtr dm3 = main.Handle;
-
+            IntPtr dm3 = ga.Handle;
+            IntPtr dm4 = main.Handle;
 
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);

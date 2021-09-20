@@ -13,21 +13,30 @@ namespace WinForms_CSharp_CTMTestTask
         Pen pen = new Pen(Color.Black, grph_pen_line_width);
         SolidBrush brush = new SolidBrush(Color.Black);
 
-        List<int> lst_dots_x = new List<int>();
-        List<int> lst_dots_y = new List<int>();
+        public void grph_doDots()
+        {
+            for (int i = 0; i < Program.core.get_lst_dots_x().Count; i++)
+            {
+                grph_dots_add(Program.core.get_lst_dots_x()[i], Program.core.get_lst_dots_y()[i]);
+            }
+        }
 
         public void grph_doConnection()
         {
-            Point p1, p2;
-            for (int i = 0; i<lst_dots_x.Count-1;i++)
+            if (Program.core.get_lst_dots_x().Count>=2)
             {
-                p1 = new Point(lst_dots_x[i], lst_dots_y[i]);
-                p2 = new Point(lst_dots_x[i+1], lst_dots_y[i+1]);
+            Point p1, p2;
+            for (int i = 0; i<Program.core.get_lst_dots_x().Count-1;i++)
+            {
+                p1 = new Point(Program.core.get_lst_dots_x()[i], Program.core.get_lst_dots_y()[i]);
+                p2 = new Point(Program.core.get_lst_dots_x()[i+1], Program.core.get_lst_dots_y()[i+1]);
                 Program.main.g.DrawLine(pen, p1, p2);
             }
-            p1 = new Point(lst_dots_x[lst_dots_x.Count], lst_dots_y[lst_dots_y.Count]);
-            p2 = new Point(lst_dots_x[0], lst_dots_y[0]);
+            p1 = new Point(Program.core.get_lst_dots_x()[Program.core.get_lst_dots_x().Count-1], Program.core.get_lst_dots_y()[Program.core.get_lst_dots_y().Count-1]);
+            p2 = new Point(Program.core.get_lst_dots_x()[0], Program.core.get_lst_dots_y()[0]);
             Program.main.g.DrawLine(pen, p1, p2);
+
+            }
         }
         
         public void grph_clear()
@@ -35,15 +44,9 @@ namespace WinForms_CSharp_CTMTestTask
             Program.main.g.Dispose();
         }
 
-        public void grph_dots_add(int x, int y)
+        void grph_dots_add(int x, int y)
         {
-            Program.main.g.FillRectangle(brush, x, y, 1, 1);
-        }
-
-        public void lst_loader()
-        {
-            lst_dots_x = Program.core.get_lst_dots_x();
-            lst_dots_y = Program.core.get_lst_dots_y();
+            Program.main.g.FillEllipse(brush, x-5, y-5, grph_pen_line_width+ 10, grph_pen_line_width+10);
         }
     }
 }

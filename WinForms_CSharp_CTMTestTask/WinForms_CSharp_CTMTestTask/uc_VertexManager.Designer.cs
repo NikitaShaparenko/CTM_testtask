@@ -45,9 +45,9 @@
             // 
             this.b_AddVertex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.b_AddVertex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b_AddVertex.Location = new System.Drawing.Point(7, 239);
+            this.b_AddVertex.Location = new System.Drawing.Point(7, 238);
             this.b_AddVertex.Name = "b_AddVertex";
-            this.b_AddVertex.Size = new System.Drawing.Size(146, 34);
+            this.b_AddVertex.Size = new System.Drawing.Size(144, 34);
             this.b_AddVertex.TabIndex = 0;
             this.b_AddVertex.Text = "Добавить точку";
             this.b_AddVertex.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@
             // 
             this.b_InsertVertex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.b_InsertVertex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b_InsertVertex.Location = new System.Drawing.Point(7, 314);
+            this.b_InsertVertex.Location = new System.Drawing.Point(7, 313);
             this.b_InsertVertex.Name = "b_InsertVertex";
-            this.b_InsertVertex.Size = new System.Drawing.Size(146, 34);
+            this.b_InsertVertex.Size = new System.Drawing.Size(144, 34);
             this.b_InsertVertex.TabIndex = 1;
             this.b_InsertVertex.Text = "Вставить точку";
             this.b_InsertVertex.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             this.b_KillVertex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.b_KillVertex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b_KillVertex.Location = new System.Drawing.Point(7, 354);
+            this.b_KillVertex.Location = new System.Drawing.Point(7, 353);
             this.b_KillVertex.Name = "b_KillVertex";
-            this.b_KillVertex.Size = new System.Drawing.Size(146, 34);
+            this.b_KillVertex.Size = new System.Drawing.Size(144, 34);
             this.b_KillVertex.TabIndex = 2;
             this.b_KillVertex.Text = "Удалить точку";
             this.b_KillVertex.UseVisualStyleBackColor = true;
@@ -89,6 +89,7 @@
             // 
             // gb_Info
             // 
+            this.gb_Info.BackColor = System.Drawing.Color.White;
             this.gb_Info.Controls.Add(this.txtSquare);
             this.gb_Info.Controls.Add(this.txtVertexNumber);
             this.gb_Info.Controls.Add(this.label3);
@@ -113,7 +114,7 @@
             // txtVertexNumber
             // 
             this.txtVertexNumber.AutoSize = true;
-            this.txtVertexNumber.Location = new System.Drawing.Point(112, 41);
+            this.txtVertexNumber.Location = new System.Drawing.Point(112, 42);
             this.txtVertexNumber.Name = "txtVertexNumber";
             this.txtVertexNumber.Size = new System.Drawing.Size(18, 20);
             this.txtVertexNumber.TabIndex = 3;
@@ -131,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 39);
+            this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 40);
             this.label2.TabIndex = 0;
@@ -139,6 +140,7 @@
             // 
             // lb
             // 
+            this.lb.BackColor = System.Drawing.SystemColors.Control;
             this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb.FormattingEnabled = true;
             this.lb.ItemHeight = 20;
@@ -151,6 +153,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lb);
             this.Controls.Add(this.gb_Info);
             this.Controls.Add(this.lbl_Header);
@@ -160,7 +164,7 @@
             this.MaximumSize = new System.Drawing.Size(213, 521);
             this.MinimumSize = new System.Drawing.Size(213, 521);
             this.Name = "uc_VertexManager";
-            this.Size = new System.Drawing.Size(213, 521);
+            this.Size = new System.Drawing.Size(211, 519);
             this.Load += new System.EventHandler(this.uc_VertexManager_Load);
             this.gb_Info.ResumeLayout(false);
             this.gb_Info.PerformLayout();

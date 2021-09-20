@@ -14,18 +14,26 @@ namespace WinForms_CSharp_CTMTestTask
         public Graphics g;
         public frm_main()
         {
-           
             InitializeComponent();
-            g = pnl.CreateGraphics();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pnl.Controls.Clear();
+            g = Program.ga.pnl_area.CreateGraphics();
+            pnlAddon.Controls.Clear();
             Program.vm.Location = new Point(1, 1);
             Program.vm.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
-            pnl.Controls.Add(Program.vm);
+            pnlAddon.Controls.Add(Program.vm);
+            
+            Program.ga.Location = new Point(1, 1);
+            Program.ga.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
+            pnl.Controls.Add(Program.ga);
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
